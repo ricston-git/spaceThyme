@@ -44,6 +44,7 @@ public class Main {
         TemplateEngine engine = new TemplateEngine()
         engine.setTemplateResolver(resolver)
         File outFile = new File("site/index.html");
+        outFile.getParentFile().mkdirs();
         java.io.FileWriter writer = new java.io.FileWriter(outFile)
 
         Context context = new Context();
